@@ -4,6 +4,11 @@ from selenium import webdriver
 
 
 class WorkshopTests(unittest.TestCase):
+    """
+    URL: <aby poznać URL, musisz rozwiązać zadanie 1.>
+
+
+    """
 
     def setUp(self):
         self.driver = webdriver.Chrome()
