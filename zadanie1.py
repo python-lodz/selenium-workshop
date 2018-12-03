@@ -1,11 +1,12 @@
 import unittest
 
 from selenium import webdriver
+from selenium.webdriver.support.ui import Select
 
 
 class WorkshopTests(unittest.TestCase):
     """
-    URL: 
+    URL: https://breadcrumbscollector.tech/pl/selenium/01.html
 
     Wcisnij przyciski z sylabami tytułu popularnej piosenki w odpowiedniej kolejności
     i z rozwijanego menu wybierz język w jakim piosenka jest napisana.
@@ -22,7 +23,11 @@ class WorkshopTests(unittest.TestCase):
         self.driver.quit()
 
     def test_exercise(self):
-        pass
+        # miejsce na Twoje rozwiązanie
+
+        next_url = self.driver.switch_to.alert.text
+        self.driver.switch_to.alert.accept()
+        print(f'Nastepny URL: {next_url}')
 
 
 if __name__ == "__main__":
