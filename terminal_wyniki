@@ -16,3 +16,12 @@ Nastepny URL: https://breadcrumbscollector.tech/pl/selenium/2223.html
 Ran 1 test in 7.152s
 
 OK
+
+PS C:\Users\tomek_user\Desktop\python-lodz\selenium-workshop> py .\zadanie2.py
+
+DevTools listening on ws://127.0.0.1:52779/devtools/browser/32bc0d6f-4aa6-48e2-ab87-b563a054989b
+.
+----------------------------------------------------------------------
+Ran 1 test in 7.810s
+
+OK
