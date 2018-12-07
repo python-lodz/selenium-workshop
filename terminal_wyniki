@@ -25,3 +25,15 @@ DevTools listening on ws://127.0.0.1:52779/devtools/browser/32bc0d6f-4aa6-48e2-a
 Ran 1 test in 7.810s
 
 OK
+
+PS C:\Users\tomek_user\Desktop\python-lodz\selenium-workshop> py .\zadanie3.py
+
+DevTools listening on ws://127.0.0.1:53160/devtools/browser/56ac7dbe-6c3e-4b81-bd74-bfb945715483
+[56084:45688:1207/223516.299:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
+[56084:45688:1207/223520.346:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
+Found accommodation: WestHouse Hotel New York
+.
+----------------------------------------------------------------------
+Ran 1 test in 13.605s
+
+OK
