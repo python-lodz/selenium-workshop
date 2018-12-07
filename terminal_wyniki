@@ -37,3 +37,16 @@ Found accommodation: WestHouse Hotel New York
 Ran 1 test in 13.605s
 
 OK
+
+PS C:\Users\tomek_user\Desktop\python-lodz\selenium-workshop> py .\zadanie4.py
+
+DevTools listening on ws://127.0.0.1:53571/devtools/browser/8fcf201d-05b1-4cca-b59b-6d9b868c6875
+[49268:1624:1207/223926.566:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
+Dostępność obiektów o 3 gwiazdkach w marcu 2019: : True
+W weekend 15-16. grudnia na Manhattanie nie ma więcej niż 10 dostępnych ofert w najniższym przedziale
+cenowym: : True
+.
+----------------------------------------------------------------------
+Ran 1 test in 22.218s
+
+OK
