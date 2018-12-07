@@ -6,3 +6,13 @@ PS C:\Users\tomek_user\Desktop\python-lodz\selenium-workshop> py .\check.py
 DevTools listening on ws://127.0.0.1:51121/devtools/browser/ca4c4b0c-1ce1-4e0e-8c38-7aa95ae0dcc9
 [34020:14404:1207/221334.461:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
 W nowym oknie Chrome powinna załadować się strona python.org
+
+PS C:\Users\tomek_user\Desktop\python-lodz\selenium-workshop> py .\zadanie1.py
+
+DevTools listening on ws://127.0.0.1:51953/devtools/browser/7ca5b9d4-2ef6-40dd-9a60-0aab21b9622a
+Nastepny URL: https://breadcrumbscollector.tech/pl/selenium/2223.html
+.
+----------------------------------------------------------------------
+Ran 1 test in 7.152s
+
+OK
