@@ -35,13 +35,12 @@ class WorkshopTests(unittest.TestCase):
     _ArrowToNextMonthInCalendar = '#frm > div.xp__fieldset.accommodation > div.xp__dates.xp__group > div.xp-calendar > div > div > div.bui-calendar__control.bui-calendar__control--next > svg'
     _15December = '#frm > div.xp__fieldset.accommodation > div.xp__dates.xp__group > div.xp-calendar > div > div > div.bui-calendar__content > div:nth-child(1) > table > tbody > tr:nth-child(4) > td:nth-child(6)'
     _16December = '#frm > div.xp__fieldset.accommodation > div.xp__dates.xp__group > div.xp-calendar > div > div > div.bui-calendar__content > div:nth-child(1) > table > tbody > tr:nth-child(4) > td:nth-child(7)'
-    _ObjectsOnSearchList = 'sr_item_main_block'
-    _check1 = 'Dostępność obiektów o 3 gwiazdkach w marcu 2019: '
-    _check2 = 'W weekend 15-16. grudnia na Manhattanie nie ma więcej niż 10 dostępnych ofert w najniższym przedziale cenowym: '
+    _ObjectsOnSearchList = 'sr_item_new'
+    _check1 = 'Dostępność obiektów o 3 gwiazdkach w marcu 2019'
+    _check2 = 'W weekend 15-16. grudnia na Manhattanie nie ma więcej niż 10 dostępnych ofert w najniższym przedziale cenowym'
+    _NoMoreThan10 = 'NoMoreThan10'
+    _AvailabilityOf3Star = 'AvailabilityOf3Star'
     
-    def setUp(self):
-        self.driver = webdriver.Chrome()
-
     def test_exercise(self):  
         #sprawdzający dostępność obiektów o 3 gwiazdkach w marcu 2019  
         self.CheckTheAvailabilityOf_3_StarFacilitiesInMarch2019()
@@ -83,27 +82,30 @@ class WorkshopTests(unittest.TestCase):
             self.driver.find_element_by_css_selector(_ArrowToNextMonthInCalendar).click()
         return
 
-    def countFoundAccomodation(self, text, _ObjectsOnSearchList, _ValueToSearch):
-        counter = 0
-        foundAccommodations = str(self.driver.find_elements_by_class_name(_ObjectsOnSearchList))
+    def countFoundAccomodation(self, text, _ObjectsOnSearchList, logic):
+        foundAccommodations = self.driver.find_elements_by_class_name(_ObjectsOnSearchList)
+        foundAccommodationsLength = len(foundAccommodations)
+        if ('NoMoreThan10' in logic):
+            print(str(text + ': {}').format(foundAccommodationsLength > 0 and foundAccommodationsLength < 10)) 
+            assert foundAccommodationsLength > 0 and foundAccommodationsLength < 10 #sprawdzający że w weekend 15-16. grudnia na Manhattanie nie ma więcej niż 10 dostępnych ofert w najniższym przedziale cenowym
+        elif ('AvailabilityOf3Star' in logic):
+            print(str(text + ': {}').format(foundAccommodationsLength > 0)) 
+            assert foundAccommodationsLength > 0 #- sprawdzający dostępność obiektów o 3 gwiazdkach w marcu 2019
+        else:
+            assert False
 
-        for item in foundAccommodations:
-            if _ValueToSearch in item: 
-                counter += 1
-            else:
-                continue
-        print(str(text + ': {}').format(counter < 10)) 
-    
     def ThereNoMoreThan_10_AvailableOffersInTheLowestPriceRangeIn15And16December(self):
+        self.driver = webdriver.Chrome()
         self.driver.get('https://booking.com')  
         self.inputValueToSearch(self._InputField, self._ValueToSearch)
         self.clickOnCalendar(self._DateField)
         self.chooseDateInCalendar(self._15December, self._16December)
         self.clickSearchButton(self._SearchButton)
         self.filterByPrice(self._FilterByLowestPrice)
-        self.countFoundAccomodation(self._check2, self._ObjectsOnSearchList, self._ValueToSearch)
+        self.countFoundAccomodation(self._check2, self._ObjectsOnSearchList, self._NoMoreThan10)
         
     def CheckTheAvailabilityOf_3_StarFacilitiesInMarch2019(self):
+        self.driver = webdriver.Chrome()
         self.driver.get('https://booking.com')  
         self.inputValueToSearch(self._InputField, self._ValueToSearch)
         self.clickOnCalendar(self._DateField)
@@ -111,7 +113,7 @@ class WorkshopTests(unittest.TestCase):
         self.chooseDateInCalendar(self._DayInCalendarFrom, self._DayInCalendarTo)
         self.clickSearchButton(self._SearchButton)
         self.filterByStar(self._FilterByStarInCheckBox)
-        self.countFoundAccomodation(self._check1, self._ObjectsOnSearchList, self._ValueToSearch)
+        self.countFoundAccomodation(self._check1, self._ObjectsOnSearchList, self._AvailabilityOf3Star)
 
 if __name__ == "__main__":
     unittest.main()
