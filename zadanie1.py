@@ -1,5 +1,7 @@
 import unittest
 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 
@@ -24,7 +26,16 @@ class WorkshopTests(unittest.TestCase):
 
     def test_exercise(self):
         # miejsce na Twoje rozwiązanie
-
+        self.driver.get('https://breadcrumbscollector.tech/pl/selenium/01.html')
+        self.driver.find_element(By.CLASS_NAME, 'de').click()
+        self.driver.find_element(By.CLASS_NAME, 'spa').click()
+        self.driver.find_element(By.CLASS_NAME, 'ci').click()
+        self.driver.find_element(By.CLASS_NAME, 'to').click()
+        self.driver.find_element_by_id('lang').click()
+        
+        #self.driver.find_element_by_id('lang').send_keys('h')
+        select = Select(self.driver.find_element_by_id('lang'))
+        select.select_by_visible_text('hiszpański')
         next_url = self.driver.switch_to.alert.text
         self.driver.switch_to.alert.accept()
         print(f'Nastepny URL: {next_url}')

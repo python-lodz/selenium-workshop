@@ -1,0 +1,70 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\tomek_user\Desktop\python-lodz\selenium-workshop> py .\check.py
+
+DevTools listening on ws://127.0.0.1:51121/devtools/browser/ca4c4b0c-1ce1-4e0e-8c38-7aa95ae0dcc9
+[34020:14404:1207/221334.461:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
+W nowym oknie Chrome powinna załadować się strona python.org
+
+PS C:\Users\tomek_user\Desktop\python-lodz\selenium-workshop> py .\zadanie1.py
+
+DevTools listening on ws://127.0.0.1:51953/devtools/browser/7ca5b9d4-2ef6-40dd-9a60-0aab21b9622a
+Nastepny URL: https://breadcrumbscollector.tech/pl/selenium/2223.html
+.
+----------------------------------------------------------------------
+Ran 1 test in 7.152s
+
+OK
+
+PS C:\Users\tomek_user\Desktop\python-lodz\selenium-workshop> py .\zadanie2.py
+
+DevTools listening on ws://127.0.0.1:52779/devtools/browser/32bc0d6f-4aa6-48e2-ab87-b563a054989b
+.
+----------------------------------------------------------------------
+Ran 1 test in 7.810s
+
+OK
+
+PS C:\Users\tomek_user\Desktop\python-lodz\selenium-workshop> py .\zadanie3.py
+
+DevTools listening on ws://127.0.0.1:53160/devtools/browser/56ac7dbe-6c3e-4b81-bd74-bfb945715483
+[56084:45688:1207/223516.299:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
+[56084:45688:1207/223520.346:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
+Found accommodation: WestHouse Hotel New York
+.
+----------------------------------------------------------------------
+Ran 1 test in 13.605s
+
+OK
+
+PS C:\Users\tomek_user\Desktop\python-lodz\selenium-workshop> py .\zadanie4.py
+
+DevTools listening on ws://127.0.0.1:53571/devtools/browser/8fcf201d-05b1-4cca-b59b-6d9b868c6875
+[49268:1624:1207/223926.566:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
+Dostępność obiektów o 3 gwiazdkach w marcu 2019: : True
+W weekend 15-16. grudnia na Manhattanie nie ma więcej niż 10 dostępnych ofert w najniższym przedziale
+cenowym: : True
+.
+----------------------------------------------------------------------
+Ran 1 test in 22.218s
+
+OK
+
+PS C:\Users\tomek_user\Desktop\python-lodz\selenium-workshop> py .\zadanie4.py
+
+DevTools listening on ws://127.0.0.1:55455/devtools/browser/cac1f74b-b6ff-4dff-8bcb-0faca6eb7901
+[51892:81628:1210/211421.800:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
+[51892:81628:1210/211422.385:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
+[51892:81628:1210/211428.248:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
+Dostępność obiektów o 3 gwiazdkach w marcu 2019: True
+
+DevTools listening on ws://127.0.0.1:55551/devtools/browser/c1296a78-47d1-449b-a08a-043bc1439904
+[61084:19276:1210/211443.156:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
+[61084:19276:1210/211453.981:ERROR:shader_disk_cache.cc(257)] Failed to create shader cache entry: -2
+W weekend 15-16. grudnia na Manhattanie nie ma więcej niż 10 dostępnych ofert w najniższym przedziale cenowym: True
+.
+----------------------------------------------------------------------
+Ran 1 test in 48.414s
+
+OK
